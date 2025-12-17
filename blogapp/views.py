@@ -43,3 +43,24 @@ def entry(request):
 		'date': date,
 		'keywords': keywords,
 	})
+
+def entry(request):
+	entry = Summaries.objects.get(id=2)
+	date = entry.date
+	keywords = str(entry.keywords)
+	keywords = keywords.split(",")
+	print("KILUBEDBIEDBIEWBDIEWBD")
+	print(len(keywords))
+	return render(request, 'entries/about-the-page.html', {
+		'date': date,
+		'keywords': keywords,
+	})
+
+def about(request):
+    return render(request, 'about.html')
+
+def resume(request):
+    return render(request, 'resume.html')
+
+def projects(request):
+	return render(request, 'projects.html')

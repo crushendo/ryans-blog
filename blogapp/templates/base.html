@@ -26,14 +26,19 @@
     <!-- script
     ================================================== -->
     <script src="{% static 'js/modernizr.js' %}"></script>
-    <script defer src="{% static 'js/fontawesome/all.min.js' %}"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/icons8-plant-doodle-16.png.png' %}">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="{% static 'images/icons8-plant-doodle-32.png' %}">
     <link rel="manifest" href="site.webmanifest">
+
+    <style>
+        .s-content__entry-header {
+            margin-top: 0px;
+        }
+    </style>
 
     {% block head %}
     {% endblock %}
@@ -61,20 +66,20 @@
 
                 <ul class="s-header__nav">
                     <li class="current"><a href="/" title="">Home</a></li>
+                    <li><a href="resume.html" title="">Resumé</a></li>
                     <li><a href="/#blog-section" class="{{smoothscroll}}" title="">Blog</a></li>
                     <li class="has-children">
                         <a href="#0" title="">My Work</a>
                         <ul class="sub-menu">
-                            <li><a href="single-video.html">Current Projects</a></li>
-                            <li><a href="single-audio.html">Publications</a></li>
+                            <li><a href="{% url 'projects' %}">Current Projects</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=MsPx5CkAAAAJ&hl=en&oi=ao">Publications</a></li>
                         </ul>
                     </li>
                     <li class="has-children">
                         <a href="#0" title="">About Me</a>
                         <ul class="sub-menu">
-                            <li><a href="category.html">About</a></li>
-                            <li><a href="category.html">Resume</a></li>
-                            <li><a href="category.html">Contact</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'resume' %}">Resumé</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -130,10 +135,10 @@
                     <h5>About The Site</h5>
 
                     <p>
-                    I am a graduate researcher, writer, and agriculturalist.
+                    I am a scientist, writer, and agriculturalist.
                     I use this site to share  research, practice my writing,
-                    and explore topics that extend beyond what I can fit into
-                    my thesis.
+                    and explore topics that extend beyond my dissertation 
+                    and professional work.
                     </p>
 
                 </div> <!-- end s-footer__info -->
@@ -143,7 +148,8 @@
                     <h5>Follow Me</h5>
 
                     <ul>
-                        <li><a href="http://twitter.com/ryan_ackett">Twitter</a></li>
+                        <li><a href="https://bsky.app/profile/ryanackett.bsky.social">Bluesky</a></li>
+                        <li><a href="https://www.linkedin.com/in/ryan-ackett/">Linkedin</a></li>
                     </ul>
 
                 </div> <!-- end s-footer__social links -->
@@ -158,7 +164,7 @@
             <div class="row">
                 <div class="column">
                     <div class="ss-copyright">
-                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                        
                     </div> <!-- end ss-copyright -->
                 </div>
             </div>

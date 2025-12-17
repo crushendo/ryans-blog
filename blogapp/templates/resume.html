@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Ackett Resume</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin-bottom: 5px;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+        .header p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        h2 {
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            font-size: 1.1em;
+        }
+        .resume {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.9em;
+            /* reduce vertical space and remove internal padding for this page */
+            margin: 0 0 4px 0;
+            padding: 0;
+            gap: 8px; /* smaller gap between the two columns */
+        }
+        /* reset paragraph defaults inside the details block so there isn't extra spacing */
+        .details p {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+<section class="resume">
+    <div class="header">
+        <h1>Ryan Ackett, Ph.D. </h1>
+        <p>
+            (813) 838-8824  | 
+            <a href="mailto:ryan.ackett@gmail.com">ryan.ackett@gmail.com</a>  | 
+            <a href="https://linkedin.com/in/ryan-ackett" target="_blank">linkedin.com/in/ryan-ackett</a> 
+        </p>
+    </div>
+
+    <h2>Education </h2>
+    
+    <h3>Doctor of Philosophy, Soil and Environmental Science </h3>
+    
+    <div class="details">
+        <p>University of Tennessee, Knoxville </p>
+        <p>January 2022 - August 2025 </p>
+    </div>
+    <p style="font-style: italic; font-size:1.0em; padding-top: 0px; margin-top: 0px;">Dissertation: "Soil Nitrous Oxide Hot Moments: Identification, Characterization, and Prediction Across Agroecosystems"
+    </p>
+
+    <h3>Master of Science, Agricultural Engineering </h3>
+    <div class="details">
+        <p>North Carolina State University </p>
+        <p>Fall 2019 - January 2022 </p>
+    </div>
+    <p style="font-style: italic; font-size:1.0em; margin-top: 0px;">Thesis: "Evaluation of Drought-Tolerant Bermudagrass Response to Water-Saving Irrigation Scheduling Methods" </p>
+    
+    <h3>Bachelor of Science, Agricultural Engineering </h3>
+    <div class="details">
+        <p>University of Florida </p>
+        <p>Fall 2011 - Spring 2016 </p>
+    </div>
+
+    <h2>Research Experience </h2>
+
+    <h3>Agricultural/Biogeochemical Modeling, Machine Learning, and Data Science</h3>
+    <div class="details">
+        <p>University of Tennessee </p>
+        <p>January 2022 - Present </p>
+    </div>
+    <ul>
+        <li>Built global GHG emissions database from 60 peer-reviewed experiments (50% US-focused) covering major agricultural systems
+including corn, soybean, wheat, and specialty crops to optimize soil management practices and improve agricultural efficiency   </li>
+    <li>Developed the first globally-generalizable machine learning (ML) model predicting crucial nitrous oxide "hot moment" emissions
+events across global agroecosystems with ~90% accuracy using accessible data inputs (weather data, soil sensors, management
+records), enabling targeted mitigation strategies and improving predictions of temporal dynamics over DayCent, etc.    </li>
+    <li>Developed and published novel ensemble machine learning strategies for improving soil GHG emissions modeling of distinct
+biogeochemical system dynamics (increased R<sup>2</sup> by 0.25 versus traditional ML) and managing unique statistical challenges such as
+highly skewed data distributions and strong anomaly presence    </li>
+    <li>Designed and managed research trials evaluating carbon and nitrogen transformations in response to soil flooding across disparate
+soil textures, analyzed gas samples via gas chromatography, performed soil physical and chemical analysis    </li>
+
+    </ul>
+
+    <h3>Precision Agriculture and Remote Sensing Applications </h3>
+    <div class="details">
+        <p>North Carolina State University </p>
+        <p>Fall 2019 - January 2022 </p>
+    </div>
+    <ul>
+        <li>Developed automated algorithms for continuous crop quality assessment using multispectral remote sensing (NDVI analysis), achieving r>0.8 correlation with ground-truth data.</li>
+        <li>Designed and implemented integrated sensor systems combining remote sensing, automated data collection, and precision agriculture techniques for enhanced agricultural monitoring and precision irrigation scheduling.</li>
+        <li>Designed and managed field trials evaluating the response of drought-resistant turfgrass to varying levels of deficit irrigation.</li>
+    </ul>
+
+    <h3>Computer Vision Applications in Agricultural Systems </h3>
+    <div class="details">
+        <p>University of Florida </p>
+        <p>August 2015 - May 2016 </p>
+    </div>
+    <ul>
+        <li>Applied machine learning and computer vision techniques to agricultural image classification, establishing foundation in advanced agricultural technologies relevant to precision agriculture initiatives.</li>
+    </ul>
+
+    <h2>Publications </h2>
+    <ul>
+        <li><b>Ackett, R.,</b> Hilafu, H., Gelfand, I., & Saha, D. (2025). Statistical identification of nitrous oxide hot moments and their significance across global agroecosystems. <i>Journal of Geophysical Research: Biogeosciences</i>, 130, e2025JG008953. <a href="https:/doi.org/10.1029/2025JG008953">https:/doi.org/10.1029/2025JG008953</a>.</li>
+        <li><b>Ackett, R.,</b> Hilafu, H., Gelfand, I., Fidan, E., Saha, D. (2025). Machine Learning Predicts Nitrous Oxide Hot Moments Across Global Agroecosystems. (Under peer review, <i>Environmental Science and Technology</i>). </li>
+        <li>Lussich, F., <b>Ackett, R.,</b> Dhaliwal, J. K., Gan, H., Saha, D. (2025). Enhancing predictions of nitrous oxide emissions from agricultural soils using a classification-swap machine learning approach. (Accepted, <i>Journal of Environmental Quality</i>). </li>
+        <li>Dhaliwal, J. K., <b>Ackett, R.,</b> Garnaik, S., Saha, D. Machine Learning for Predicting and Interpreting Soil Greenhouse Gas Emissions from Agroecosystems – A Synthesis. (Under internal review).</li>
+        <li><b>Ackett, R.,</b> Gelfand, I., Saha, D. (2025). The Effect of Extended Soil Saturation on Nitrous Oxide Emissions in Mediterranean Soils. (Under internal review). </li>
+    </ul>
+
+    <h2>Agricultural Industry Experience </h2>
+
+    <h3>Research and Development Supervisor</h3>
+    <div class="details">
+        <p>A. Duda & Sons</p>
+        <p>June 2016 - July 2019 </p>
+    </div>
+    <ul>
+        <li>Developed precision agriculture technologies, including mesh radio sensor networks for soil moisture management, automated data collection systems, and sprayer adaxial and abaxial deposition analysis computer vision software for optimization of IPM strategy.</li>
+        <li>Created variable-rate fertilization maps across ~10,000 acre citrus farm using large-scale soil analysis (>1,000 samples), soil sampling laboratory analysis, and GIS mapping in ArcGIS.</li>
+        <li>Led integrated pest management programs across ~10,000 farm acres combining technology, data analysis, and field operations for large-scale agricultural production.</li>
+    </ul>
+
+    <h3>Agricultural Engineering Intern</h3>
+    <div class="details">
+        <p>John Deere</p>
+        <p>January 2015 - May 2015 </p>
+    </div>
+    <ul>
+        <li>Designed and implemented electronic control systems for agricultural machinery, including Power Take Off control interface.</li>
+        <li>Conducted product testing and verification research as a test engineer supporting agricultural equipment development.</li>
+    </ul>
+
+    <h3>Agricultural Production and Technology Intern</h3>
+    <div class="details">
+        <p>Monsanto Company</p>
+        <p>May 2014 - August 2014 </p>
+    </div>
+    <ul>
+        <li>Developed water balance irrigation scheduling tools for optimized agricultural water management.</li>
+        <li>Managed field inspection teams and facilitated communication between field operations and management, demonstrating project coordination and stakeholder management skills.</li>
+    </ul>
+
+    <h2>Science-Policy Integration Experience </h2>
+
+    <div class="details">
+        <h3>Capitol Hill Lobby Day Representative - American Geophysical Union </h3>
+        <p></p>
+        <p>December 2024 </p>
+    </div>
+    <ul>
+        <li>Met with Knoxville Senate and House Representatives on behalf of AGU to discuss science and agricultural policy legislation.</li>
+    </ul>
+
+    <div class="details">
+        <h3>Junior Fellow, Climate and Community Institute </h3>
+        <p></p>
+        <p>May 2023 - August 2025 </p>
+    </div>
+    <ul>
+        <li>Lead author on policy report analyzing policy reforms and economic opportunities for US Farm Bill and agricultural programs.</li>
+        <li>Demonstrated ability to translate complex agricultural research into policy-relevant economic analysis for diverse stakeholders.</li>
+    </ul>
+
+    <h2>Science Communication </h2>
+    <div class="details">
+        <h3>Academic Lectures </h3>
+    </div>
+    <ul>
+        <li>"How to Feed an Empire: Farming, Fertilizer, and the American Project" – Course lecture for ESS 434 Soil Biology, UTK (March 2024)</li>
+        <li>"Soil Carbon: Unearthing the Quiet Revolution" – Course lecture for ESS 434 Soil Biology, UTK (March 2023)</li>
+    </ul>
+    <div class="details">
+        <h3>Professional Scientific Presentations </h3>
+    </div>
+    <ul>
+        <li>"The Characterization and Prediction of Nitrous Oxide Hot Moments at Daily Resolution" – American Geophysical Union Annual Conference (December 2024)</li>
+        <li>"Predicting Agricultural Soil Management Optimization Using Machine Learning" - <b>First Prize Winner</b>, Global Climate ChangeCommunity, Soil Science Society of America Annual Conference (November 2022)</li>
+        <li>"Visual Quality of TifTuf Bermudagrass in Response to Varying Degrees of Deficit Irrigation" - ASABE Annual Meeting (July 2021)</li>
+        <li>"Outcomes and Ethics of Agricultural Automation" - <b>Finalist</b>, ASABE Ethics Essay Competition (July 2021)</li>
+        <li>"Novel Weighing Lysimeter with Lower Boundary Control" - ASABE Annual International Meeting (July 2020)</li>
+    </ul>
+
+    <div class="details">
+        <h3>Policy and Extension-Focused Communications </h3>
+    </div>
+    <ul>
+        <li>The Roots of the Farm Bill - Blog post, Climate and Community Institute (March 2024)</li>
+        <li>"Water-saving irrigation Strategies for TifTuf Bermudagrass" – Extension seminar, North Carolina State University (October 2021)</li>
+    </ul>
+
+    <h2>Science-Policy Integration Experience </h2>
+
+    
+    
+    <div class="details">
+        <h3>University of Tennessee United Campus Workers, Chair </h3>
+        <p></p>
+        <p>August 2022 - August 2024 </p>
+    </div>
+    <ul>
+        <li>Led comprehensive needs assessments working directly with university administration to evaluate student living conditions and healthcare requirements, developed comparative reports used by administration in policy decisions.</li>
+        <li>Managed organizational strategy for 1,000+ member constituency, demonstrating skills in large-scale program coordination.</li>
+    </ul>
+    
+    <div class="details">
+        <h3>Global Leader Award, University of Tennessee Institute of Agriculture</h3>
+        <p></p>
+        <p>2024 </p>
+    </div>
+    <ul>
+        <li>Awarded to graduate student who demonstrated remarkable leadership in promoting global community both abroad and on the University of Tennessee campus.</li>
+    </ul>
+    
+    <h2>Technical Skills </h2>
+    
+    <h3>Data Analysis and Modeling </h3>
+    <ul>
+        <li>10+ years experience in Python scientific computing (Pandas, SciPy, NumPy, scikit-learn).</li>
+        <li>3+ years machine learning and deep learning applications (e.g. PyTorch) for agricultural systems.</li>
+        <li>3+ years experience with federal agricultural databases and database management (MySQL, PostgreSQL).</li>
+        <li>Full-stack web development for agricultural applications (Django, SQL, HTML, CSS, JavaScript).</li>
+        <li>Soil physical and chemical analysis and instrumentation - chemical extraction, microplate reader, TOC/TN analyzer, gas chromatography (FID + ECD), autoclave.</li>
+
+    </ul>
+
+    <h3>Geospatial Analysis and Remote Sensing </h3>
+    <ul>
+        <li>Multispectral remote sensing and NDVI analysis for agricultural applications.</li>
+        <li>ArcGIS experience including precision agriculture mapping and large-scale soil analysis.</li>
+        <li>Computer vision applications (OpenCV) for agricultural image analysis.</li>
+        <li>2+ years Campbell Scientific datalogger programming and sensor network design.</li>
+    </ul>
+    
+    <h2>References</h2>
+    <p style="font-size:0.9em;">
+        Debasish Saha, Ph.D. (Assistant Professor, University of Tennessee) | Email: dsaha3@utk.edu; Phone: 865-974-7003
+    </p>
+    <p style="font-size:0.9em;">
+        Emine Fidan, Ph.D. (Assistant Professor, University of Tennessee) | Email: efidan@utk.edu; Phone: (865) 974-7132 
+    </p>
+    <p style="font-size:0.9em;">
+        Garey Fox, D.WRE (Dean of College of Agriculture and Life Sciences, North Carolina State University) | Email: gafox2@ncsu.edu
+    </p>
+</section>
+{% endblock %}

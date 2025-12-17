@@ -1,0 +1,28 @@
+# --- Security & Secrets ---
+.env
+.venv
+env/
+venv/
+local_settings.py
+secrets.json
+BlogContainer/
+
+# --- Django Specific ---
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+db.sqlite3-journal
+
+
+# --- Database & Migration Dumps ---
+whole.json
+data.json
+*.sql
+
+# --- System & IDE ---
+.DS_Store
+.vscode/*.log
+# (Optional) If you want to keep your devcontainer config private:
+# .devcontainer/

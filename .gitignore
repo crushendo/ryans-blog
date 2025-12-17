@@ -1,6 +1,9 @@
 # --- Security & Secrets ---
 .env
 .venv
+db.sqlite3
+whole.json
+production_data.json
 env/
 venv/
 local_settings.py

@@ -5,7 +5,6 @@
   },
   "deploy": {
     "preDeployCommand": "python manage.py migrate && python manage.py loaddata datadump.json",
-    "startCommand": "gunicorn blog.wsgi --bind 0.0.0.0:$PORT",
     "restartPolicyType": "ON_FAILURE"
   }
 }

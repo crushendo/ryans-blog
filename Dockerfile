@@ -29,4 +29,4 @@ COPY . .
 RUN python manage.py collectstatic --noinput
 
 # 5. Start the engine
-CMD gunicorn blog.wsgi --bind 0.0.0.0:8080
+CMD gunicorn blog.wsgi --bind 0.0.0.0:8000

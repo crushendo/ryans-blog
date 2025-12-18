@@ -84,8 +84,7 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        # The 'Spare Tire': If no DATABASE_URL is found, use SQLite
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        default=os.environ.get('DATABASE_URL'),
         conn_max_age=600
     )
 }

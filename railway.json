@@ -4,7 +4,7 @@
     "builder": "DOCKERFILE"
   },
   "deploy": {
-    "preDeployCommand": "python manage.py migrate && python manage.py loaddata datadump.json",
+    "preDeployCommand": "python manage.py migrate; python manage.py loaddata datadump.json",
     "restartPolicyType": "ON_FAILURE"
   }
 }

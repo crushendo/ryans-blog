@@ -30,60 +30,103 @@
                         <div class="s-content__entry-content">
 
                             <p class="lead">
-                            This is my personal website, where I host my contact information, a (hopefully) 
-                            up-to-date resume, posts about my work and thoughts, and anything else I may
-                            wish to in the future! In addition to allowing my work and myself to have about
-                            greater web and searchability presence, I'm also using this site to keep my
-                            development skills active.</p>
-                            
+                            I'm excited to announce that I have a new publication out in the Journal of Environmental Quality 
+                            titled <a href="https://doi.org/10.1002/jeq2.70126" target="_blank" style=font-weight:bold;>
+                            Enhancing predictions of nitrous oxide emissions from agricultural soils using a classification-swap 
+                            machine learning approach</a>! For this paper I got to partner with my good friend Facundo on
+                            an idea I had with its origins in, interestingly 
+                            enough, dermatology and medical science. In this blog post, I'd like to share some background of how
+                            this paper came to be, and why I think its findings are important for the future of ag+climate modeling.
+                            </p>
+
                             <p> 
-                            This site is written entirely in the Django python framework.
-                            I got started using Django when I used to work on a farm in South
-                            Florida, where my job was basically to help move our farm operations into the 
-                            21st century. Shuttered away in the bedroom of an old farmhouse on the property,
-                            surrounded by the mildewing stacks of paper farm records dating back a decade or 
-                            more, I learned. I learned first how the farm operated, how decisions were made,
-                            what information was and was not available, and how that information was interpreted.
-                            I talked with operations managers, farmworkers crew supervisors, supply managers,
-                            and anyone else I could until I was able to wrap my head around the system. Then,
-                            I returned to my musty 'office' and imagined how I could make everyone's lives
-                            easier, more streamlined. </p> 
+                            There are a couple of huge challenges with modeling nitrous oxide (N2O) emissions from ag soils. 
+                            First, N2O emissions are pretty hard to measure- it typically requires a huge amount of
+                            manual labor to collect gas samples from the field, and then expensive lab equipment to analyze those
+                            samples. As a result, there are relatively few high-quality datasets of N2O emissions from ag soils, which
+                            makes it hard to put together enough data to build reliable and generalizable models. Second, N2O
+                            emissions are influenced by a complex interplay of factors, including soil properties, weather conditions,
+                            and- crucially to this paper- biogeochemical processes occurring in the soil. You see, N2O is a byproduct
+                            of microbial metabolic activity in the soil. There are two main groups of bacteria which use nitrogen as
+                            a key part of their metabolism- nitrifying bacteria, which convert ammonium (NH4+) to nitrate (NO3-), and 
+                            denitrifying bacteria, which convert nitrate (NO3-) to nitrogen gas (N2). Both of these groups of bacteria
+                            produce N2O, but under very different conditions. For example, nitrifiers are aerobic, meaning they are 
+                            most active when soils are well-aurated and dry, while denitrification is an anaerobic process, and thus 
+                            overwhelmingly occurs when soils are wet and poorly-aerated. All of this means that there are at least two
+                            very different "modes" of N2O production in ag soils, each with its own set of drivers and relationships 
+                            to the environment.
+                            </p>
 
                             <img src="/static/images/IMG_1524.JPG" alt="Farm Image" class="s-content__media-img">
+
+                            <p>
+                            So as you can see, these two challenges compound one another to make accurate N2O modeling a famously elusive 
+                            goal. As a general rule, the more complex the data patterns and relationships you want to model, the more data 
+                            you need to train and validate that model. Because soil N2O emissions data is both complex and scarce, there 
+                            generally hasn't been a whole lot of success in building accurate models for it- machine learning or otherwise.
+                            </p> 
     
                             <p>
-                            As any well run farm is, our farm operated on data. Data about yields, about
-                            about weather, about crop health, about pests and threats, about supplies, and more. 
-                            But this data was all scattered across paper records, excel sheets, and a few
-                            outdated software systems that barely worked. I set about designing a new system
-                            to collect, store, and analyze this data, and present it to the relevant people
-                            in a way that was easy to understand and act upon. I chose Django as the framework
-                            for this system, as it allowed me to build a powerful web application, and its 
-                            basis in python meant I could leverage a wide range of data analysis libraries to  
-                            drive insights from the data we collected all in one language.
-                            Over the course of months, I built out the system, working closely with farm staff
-                            across all roles to ensure it met their needs. The result was a comprehensive farm 
-                            management system that significantly improved operational efficiency and decision-making 
-                            on the farm, from integrated pest management to irrigation scheduling to supply and 
-                            inventory management. It was incredibly rewarding to see how technology could transform
-                            a traditional industry like agriculture, and it sparked my passion for web development
-                            and data-driven solutions.
+                            So as we discussed, a key reason why N2O emissions are so complex is because it is actually the net result
+                            of two very different processes- nitrification and denitrification- which respond to environmental changes
+                            in very different ways. Often N2O emissions are modeled as a single process, which means that the model is 
+                            trying to learn two different and often contradictory sets of relationships. What's worse, nitrification is 
+                            the dominant process for the large majority of the time, with brief pulses of denitrification-driven N2O
+                            emissions often being drowned out as a small minority of the data.
                             </p>
 
                             <p>
-                            Since then, I've only grown my expertise in data science and precision agriculture,
-                            and this site is just another way to grow and refine my skills. In an attempt to
-                            keep up with the changing landscape of development, I've decided to build this site
-                            fully integrated with Docker as a way to learn more about containerization and deployment.
-                            While certainly not necessary for a personal site like this, I wanted to challenge myself to learn
-                            something new and expand my skillset. Ultimately, my vision is for a democratized, 
-                            sustainable food system where access to massive capital is no longer a barrier to entry for
-                            farmers. A thousand things will need to change to make that vision a reality, but if we 
-                            consider accessibility and democratization as an ethos for each of those thousand changes,
-                            then tangible progress can be made. One tiny inflection toward democratization is making 
-                            sure the technology I build is accessible to all on any platform. Hence, containerization
-                            with Docker, so that what I build on this site (and in the future) can be run by anyone, 
-                            anywhere, regardless of their operating system or environment.
+                            This is where the dermatology connection comes in. Medical and racial justice researchers and advocates 
+                            (who I am proud to say include my significant other, who is a dermatological PA and has taught me much!) have 
+                            long pointed out that medical textbooks and training materials have a strong bias towards lighter skin tones
+                            and white populations. This has real consequences- for example, a 2020 study found that medical students were 
+                            significantly less able to identify symptoms of common skin conditions when presented on darker skin tones 
+                            compared to lighter skin tones. Poor health outcomes resulting from this bias are well-documented, but can be
+                            hidden in aggregate health data by the overwhelming majority of lighter-skinned patients. To address this issue,
+                            medical researchers have advocated against using one-size-fits-all models and performance metrics, and instead
+                            recommend explicit representation and evaluation of different skin tones and populations.
+                            </p>
+
+                            <img src="/static/thumbnails/med-diversity.jpg" alt="Medical Diversity" class="s-content__media-img" style="margin-bottom:0px;">
+                            <p style="margin-bottom:2vw;"> Image credit: <a href="http://www.freepik.com">Designed by Freepik</a> </p>
+
+
+                            <p>
+                            Inspired by this work, I wondered if a similar approach could be applied to N2O emissions modeling. What if,
+                            instead of trying to build one model to capture all types and modes of N2O emissions, we explicitly separated out
+                            different "classes" of emissions, and built separate models for each class? This way, each model could focus on 
+                            learning the specific and more consistent relationships and drivers relevant to its class. Theoretically, this 
+                            would lead to a lower data requirement for each model, since each model would be simpler and more focused. 
+                            Additionally, by separating the emissions into distinct classes, we could prevent the dominant class from drowning 
+                            out the minority class in the aggregate data.
+                            </p>
+
+                            <p>
+                            This is precisely the approach we took in this paper. To build individual models for nitrification-dominant background
+                            emissions and denitrification-dominant pulse 'hot moment' emissions, we first segmented all of our N2O emissions data into
+                            these two classes based on their rate of emissions. We then trained separate random forest models for each class, using 
+                            the same set of environmental predictor variables. Finally, we combined the models into a type of ensemble model we called
+                            a "classification-swap" model- for each new data point, we first used a classifier to determine which model was most 
+                            appropriate, and then used that model to make the final prediction.
+                            </p>
+
+                            <p>
+                            The results were very promising! We found that the classification-swap model significantly outperformed a
+                            traditional single-model approach, achieving ~400% improvement in R2 and ~15% reduction in RMSE on an independent
+                            holdout dataset. This suggests that explicitly accounting for the different modes of N2O emissions can lead to
+                            substantial improvements in model accuracy and reliability. These improvements were largely driven my our 
+                            classification-swap model's superior representation of the rare but highly impactful denitrification-driven N2O pulses,
+                            which were poorly captured by the traditional machine learning model. Ordinarily, you would expect such improvements on a
+                            minority class to require a significant increase in data- however, our approach allowed us to achieve these gains from a 
+                            relatively modest dataset from only a single experimental site with multiple years of observations.
+                            </p>
+
+                            <p>
+                            Overall, I believe this paper demonstrates a valuable case-study in a strategy to improve agricultural GHG
+                            modeling given the significant challenges and constraints we face. Perhaps more than that, even, is how
+                            interdisciplinary inspiration and thinking can lead to novel solutions to long-standing problems. I hope that
+                            this work encourages others to be curious about each other and the world. Each of us has wisdom to offer from
+                            our own unique experiences and perspectives as long as we are open to seeing it.
                             </p>
 
 

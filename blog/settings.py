@@ -87,7 +87,8 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
+        # This fallback string is used only if DATABASE_URL is missing from .env
+        default='postgres://postgres:postgres@db:5432/postgres',
         conn_max_age=600
     )
 }

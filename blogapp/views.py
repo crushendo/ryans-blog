@@ -44,7 +44,7 @@ def entry(request):
 		'keywords': keywords,
 	})
 
-def entry(request):
+def intro(request):
 	entry = Summaries.objects.get(id=2)
 	date = entry.date
 	keywords = str(entry.keywords)
@@ -52,6 +52,18 @@ def entry(request):
 	print("KILUBEDBIEDBIEWBDIEWBD")
 	print(len(keywords))
 	return render(request, 'entries/about-the-page.html', {
+		'date': date,
+		'keywords': keywords,
+	})
+
+def class_swap_ml(request):
+	entry = Summaries.objects.get(id=3)
+	date = entry.date
+	keywords = str(entry.keywords)
+	keywords = keywords.split(",")
+	print("KILUBEDBIEDBIEWBDIEWBD")
+	print(len(keywords))
+	return render(request, 'entries/class-swap-ml.html', {
 		'date': date,
 		'keywords': keywords,
 	})

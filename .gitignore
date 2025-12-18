@@ -23,6 +23,7 @@ db.sqlite3-journal
 whole.json
 data.json
 *.sql
+datadump.json
 
 # --- System & IDE ---
 .DS_Store

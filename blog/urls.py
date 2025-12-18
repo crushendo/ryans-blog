@@ -26,7 +26,9 @@ urlpatterns = [
     path('projects.html', views.projects, name='projects'),
     path('resume.html', views.resume, name='resume'),
     path('entries/soil-carbon-science.html', views.entry, name='entry'),
-    path('entries/about-the-page.html', views.entry, name='entry'),
+    path('entries/about-the-page.html', views.intro, name='intro'),
+    path('entries/class-swap-ml.html', views.class_swap_ml, name='class_swap_ml'),
+
 
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

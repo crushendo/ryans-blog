@@ -4,9 +4,9 @@ services:
   app:
     build:
       context: ..
-      dockerfile: .devcontainer/Dockerfile
+      dockerfile: Dockerfile
     env_file:
-      - .env
+      - ../.env
     volumes:
       - /var/home/rackett/DjangoProjects/BlogContainer:/workspaces/ryans-blog/BlogContainer
     command: sleep infinity

@@ -4,3 +4,4 @@ pillow
 python-decouple
 whitenoise
 gunicorn
+dj-database-url==2.1.0

@@ -1,38 +1,32 @@
-FROM mcr.microsoft.com/devcontainers/python:1-3.11-bullseye
-
-ENV PYTHONUNBUFFERED 1
-
-# Use the same Python version you are currently using
+# Use a clean, small Python image
 FROM python:3.11-slim
 
-# Install system dependencies for psycopg2 and Pillow (PGE, libjpeg, etc.)
+# Prevent Python from writing .pyc files and keep logs coming in real-time
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+WORKDIR /app
+
+# 1. Install system dependencies for Postgres and Images
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     gcc \
     libjpeg-dev \
     zlib1g-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-# Create a requirements file inside the image
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-RUN apt-get update && apt-get install -y \
-    git \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
-# [Optional] If you want to keep the container running
+# 2. Install Python dependencies
+# We copy this separately so Docker "caches" your layers (faster builds)
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 3. Copy your actual code into /app
+COPY . .
+
+# 4. Prepare static files (Critical for CSS/Images to work)
+# This gathers everything into the 'staticfiles' folder we defined in settings.py
+RUN python manage.py collectstatic --noinput
+
+# 5. Start the engine
 CMD ["gunicorn", "blog.wsgi:application", "--bind", "0.0.0.0:8000"]
-
-# [Optional] If your requirements rarely change, uncomment this section to add them to the image.
-# COPY requirements.txt /tmp/pip-tmp/
-# RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-#    && rm -rf /tmp/pip-tmp
-
-# [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
-
-
-

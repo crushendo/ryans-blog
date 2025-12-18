@@ -202,7 +202,7 @@
                         {% for summary in summaries|slice:sliceStr %}
                         <article class="brick entry" data-aos="fade-up">
                             <div class="entry__thumb">
-                                <a href="{{ summary.slug }}" class="thumb-link">
+                                <a href="entries/{{ summary.slug }}.html" class="thumb-link">
                                 <img src="/static/{{ summary.thumbnail }}">                                </a>
                             </div> <!-- end entry__thumb -->
                             <div class="entry__text">
@@ -225,7 +225,7 @@
                                     {{ summary.blurb }}
                                     </p>
                                 </div>
-                                <a class="entry__more-link" href="{{ summary.slug }}">Learn More</a>
+                                <a class="entry__more-link" href="entries/{{ summary.slug }}.html">Learn More</a>
                             </div> <!-- end entry__text -->
                         </article> <!-- end article -->
                         {% endfor %}

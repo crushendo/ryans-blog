@@ -1,0 +1,269 @@
+[
+{
+    "model": "blogapp.summaries",
+    "pk": 1,
+    "fields": {
+        "title": "Test Blog- More Coming Soon!",
+        "date": "2025-11-19",
+        "author": "Ryan Ackett",
+        "keywords": "test, blog",
+        "blurb": "Here is a test demo of how my blog entries will go. I want to see how they're going to look on the home page.",
+        "content": "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "thumbnail": "thumbnails/soil_image.jpg",
+        "slug": "soil-carbon-science"
+    }
+},
+{
+    "model": "blogapp.summaries",
+    "pk": 2,
+    "fields": {
+        "title": "A Little About this Website",
+        "date": "2025-12-17",
+        "author": "Ryan Ackett",
+        "keywords": "about",
+        "blurb": "Hi, I'm Ryan, and this is my personal website.",
+        "content": "?",
+        "thumbnail": "thumbnails/80gbdd.jpg",
+        "slug": "about-the-page"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$mZQogINVO8zL$73Pr7uXnjxl439f0QkA6lVMTLJEuqULspG1rc0fwLLg=",
+        "last_login": "2021-02-16T21:40:04.275Z",
+        "is_superuser": true,
+        "username": "ryan",
+        "first_name": "",
+        "last_name": "",
+        "email": "ryan.ackett@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-01-29T19:18:04.262Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "k0312uk015ctcca2a25fvv2ot3fl7k0v",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hCGUqAu3XsGMjOAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hjuIsQJx-N0J-pLqDeMd6a5JbXZeZ5K7Ig3Z5bTE9L4f7d1Cwl2-tfEadndXWOvLeeMp6YsM6GoRMA3vIeTB6UtERAYzO8QDaJMvgUY3i_QHaVzdw:1lC84i:YDwWhGWz7NhGTCa645srYmTy8is8sA1Jh-kRBYNcR0Y",
+        "expire_date": "2021-03-02T21:40:04.281Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kotzqxzh7k4ayasl7eap5efz9h9pej7s",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hCGUqAu3XsGMjOAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hjuIsQJx-N0J-pLqDeMd6a5JbXZeZ5K7Ig3Z5bTE9L4f7d1Cwl2-tfEadndXWOvLeeMp6YsM6GoRMA3vIeTB6UtERAYzO8QDaJMvgUY3i_QHaVzdw:1l5gGX:c4ELRa1AYvWTROUC9wL4RnnR2nLzA-qD8QtVJNmAJWg",
+        "expire_date": "2021-02-13T02:45:37.560Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "pgpio1nzxenf7g5b9xlagi3h1nr9r4gm",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hCGUqAu3XsGMjOAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hjuIsQJx-N0J-pLqDeMd6a5JbXZeZ5K7Ig3Z5bTE9L4f7d1Cwl2-tfEadndXWOvLeeMp6YsM6GoRMA3vIeTB6UtERAYzO8QDaJMvgUY3i_QHaVzdw:1l5aYU:MKLYxPOEyTuw1TWNYdphXeizSZ7V5egCyuT9ewQRAdU",
+        "expire_date": "2021-02-12T20:39:46.897Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2021-01-29T21:09:59.465Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "1",
+        "object_repr": "Summaries object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2021-01-29T22:19:56.706Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "1",
+        "object_repr": "Summaries object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2021-01-29T22:47:43.901Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "2",
+        "object_repr": "Summaries object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2021-01-30T02:49:50.058Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "3",
+        "object_repr": "Summaries object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2021-01-30T02:53:57.446Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "4",
+        "object_repr": "Summaries object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2021-01-30T02:56:16.142Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "5",
+        "object_repr": "Summaries object (5)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2021-02-16T21:41:17.727Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "1",
+        "object_repr": "Summaries object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2021-02-16T21:55:51.322Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "2",
+        "object_repr": "Summaries object (2)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2021-02-16T21:55:57.621Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "3",
+        "object_repr": "Summaries object (3)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2021-02-16T21:56:03.299Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "4",
+        "object_repr": "Summaries object (4)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2021-02-16T21:56:08.707Z",
+        "user": [
+            "ryan"
+        ],
+        "content_type": [
+            "blogapp",
+            "summaries"
+        ],
+        "object_id": "5",
+        "object_repr": "Summaries object (5)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}
+]

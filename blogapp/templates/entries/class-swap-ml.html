@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block title %}How Dermatology Improves Ag+Climate Modeling{% endblock %}
+
+{% block content %}
+    <!-- content
+    ================================================== -->
+    <section class="s-content">
+
+        <div class="row">
+            <div class="column large-12">
+
+                <article class="s-content__entry format-standard">
+
+                    <div class="s-content__media">
+                        <div class="s-content__post-thumb">
+                            <img src="images/thumbs/single/single-post-1050.jpg" 
+                                 srcset="images/thumbs/single/single-post-2100.jpg 2100w, 
+                                         images/thumbs/single/single-post-1050.jpg 1050w, 
+                                         images/thumbs/single/single-post-525.jpg 525w" sizes="(max-width: 2100px) 100vw, 2100px" alt="">
+                        </div>
+                    </div> <!-- end s-content__media -->
+
+                    <div class="s-content__entry-header">
+                        <h1 class="s-content__title s-content__title--post">How Dermatology Improves Ag+Climate Modeling</h1>
+                    </div> <!-- end s-content__entry-header -->
+
+                    <div class="s-content__primary">
+
+                        <div class="s-content__entry-content">
+
+                            <p class="lead">
+                            This is my personal website, where I host my contact information, a (hopefully) 
+                            up-to-date resume, posts about my work and thoughts, and anything else I may
+                            wish to in the future! In addition to allowing my work and myself to have about
+                            greater web and searchability presence, I'm also using this site to keep my
+                            development skills active.</p>
+                            
+                            <p> 
+                            This site is written entirely in the Django python framework.
+                            I got started using Django when I used to work on a farm in South
+                            Florida, where my job was basically to help move our farm operations into the 
+                            21st century. Shuttered away in the bedroom of an old farmhouse on the property,
+                            surrounded by the mildewing stacks of paper farm records dating back a decade or 
+                            more, I learned. I learned first how the farm operated, how decisions were made,
+                            what information was and was not available, and how that information was interpreted.
+                            I talked with operations managers, farmworkers crew supervisors, supply managers,
+                            and anyone else I could until I was able to wrap my head around the system. Then,
+                            I returned to my musty 'office' and imagined how I could make everyone's lives
+                            easier, more streamlined. </p> 
+
+                            <img src="/static/images/IMG_1524.JPG" alt="Farm Image" class="s-content__media-img">
+    
+                            <p>
+                            As any well run farm is, our farm operated on data. Data about yields, about
+                            about weather, about crop health, about pests and threats, about supplies, and more. 
+                            But this data was all scattered across paper records, excel sheets, and a few
+                            outdated software systems that barely worked. I set about designing a new system
+                            to collect, store, and analyze this data, and present it to the relevant people
+                            in a way that was easy to understand and act upon. I chose Django as the framework
+                            for this system, as it allowed me to build a powerful web application, and its 
+                            basis in python meant I could leverage a wide range of data analysis libraries to  
+                            drive insights from the data we collected all in one language.
+                            Over the course of months, I built out the system, working closely with farm staff
+                            across all roles to ensure it met their needs. The result was a comprehensive farm 
+                            management system that significantly improved operational efficiency and decision-making 
+                            on the farm, from integrated pest management to irrigation scheduling to supply and 
+                            inventory management. It was incredibly rewarding to see how technology could transform
+                            a traditional industry like agriculture, and it sparked my passion for web development
+                            and data-driven solutions.
+                            </p>
+
+                            <p>
+                            Since then, I've only grown my expertise in data science and precision agriculture,
+                            and this site is just another way to grow and refine my skills. In an attempt to
+                            keep up with the changing landscape of development, I've decided to build this site
+                            fully integrated with Docker as a way to learn more about containerization and deployment.
+                            While certainly not necessary for a personal site like this, I wanted to challenge myself to learn
+                            something new and expand my skillset. Ultimately, my vision is for a democratized, 
+                            sustainable food system where access to massive capital is no longer a barrier to entry for
+                            farmers. A thousand things will need to change to make that vision a reality, but if we 
+                            consider accessibility and democratization as an ethos for each of those thousand changes,
+                            then tangible progress can be made. One tiny inflection toward democratization is making 
+                            sure the technology I build is accessible to all on any platform. Hence, containerization
+                            with Docker, so that what I build on this site (and in the future) can be run by anyone, 
+                            anywhere, regardless of their operating system or environment.
+                            </p>
+
+
+                        </div> <!-- end s-entry__entry-content -->
+
+                        <div class="s-content__entry-meta">
+
+                            <div class="entry-author meta-blk">
+                                <div class="author-avatar">
+                                    <img class="avatar" src="images/avatars/user-06.jpg" alt="">
+                                </div>
+                                <div class="byline">
+                                    <span class="bytext">Posted By</span>
+                                    <a href="#0">Ryan Ackett</a>
+                                </div>
+                            </div>
+
+                            <div class="meta-bottom">
+                                
+                                <div class="entry-cat-links meta-blk">
+
+                                    <span>On</span>
+                                    {{ date }}
+                                </div>
+
+                                <div class="entry-tags meta-blk">
+                                    <span class="tagtext">Tags</span>
+                                    {% for word in keywords %}
+                                        <a href="#">{{word}}</a>
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+
+                        </div> <!-- s-content__entry-meta -->
+
+                        <div class="s-content__pagenav">
+                            <div class="next-nav">
+                                <a href="#" rel="next">
+                                    <span>Next</span>
+                                    Coming Soon
+                                </a>
+                            </div>
+                         </div> <!-- end s-content__pagenav -->
+
+                    </div> <!-- end s-content__primary -->
+                </article> <!-- end entry -->
+
+            </div> <!-- end column -->
+        </div> <!-- end row -->
+    </section> <!-- end s-content -->
+{% endblock %}
+
